@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catálogo - Rose Bolos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/catalogo.css">
+</head>
+<body>
+  <script>
+function mudarSlide(botao, direcao) {
+  const carousel = botao.parentElement;
+  const slides = carousel.querySelectorAll('.slide');
+
+  let indexAtual = 0;
+
+  slides.forEach((slide, index) => {
+    if (slide.classList.contains('ativo')) {
+      indexAtual = index;
+      slide.classList.remove('ativo');
+    }
+  });
+
+  let novoIndex = indexAtual + direcao;
+
+  if (novoIndex < 0) novoIndex = slides.length - 1;
+  if (novoIndex >= slides.length) novoIndex = 0;
+
+  slides[novoIndex].classList.add('ativo');
+}
+</script>
+
+  <h1>Catálogo Rose Bolos</h1>
+
+
+
+
+  <!--Bolos Aniversario-->
+  <div class="categoria" id="aniversario">
+    <h2>Bolos de Aniversário</h2>
+      <div class="menu-categorias">
+        <button onclick="irParaCategoria('aniversario')">Bolos de Aniversário</button>
+        <button onclick="irParaCategoria('caseiros')">Bolos Caseiros</button>
+        </div>
+
+    <div class="bolos-lista">
+
+      <div class="bolo-card">
+        <h3>Bolo Chocolate</h3>
+        <div class="carousel">
+          <button class="prev" onclick="mudarSlide(this, -1)">❮</button>
+
+          <img src="IMG/BolosCards/BolosAniversario/BoloAniversario1.jfif" class="slide ativo" alt="Bolo de Chocolate">
+          <img src="IMG/BolosCards/BolosAniversario/BoloChocolateAni.jfif" class="slide" alt="Bolo de Chocolate">
+          <img src="IMG/BolosCards/Massa/MassaChocolate1.jfif" class="slide" alt="Bolo de Chocolate">
+          <img src="IMG/BolosCards/Massa/MassaChocolate2.jpg" class="slide" alt="Bolo de Chocolate">
+          <img src="IMG/BolosCards/Massa/MassaChocolate3.jfif" class="slide" alt="Bolo de Chocolate">
+
+          <button class="next" onclick="mudarSlide(this, 1)">❯</button>
+        </div>
+
+        <div class="descricao">Bolo de Aniversário com recheio de Chocolate.</div>
+        <div class="preco">R$ 95,00</div>
+        <a href="https://wa.me/5511984388061?text=Olá,%20quero%20fazer%20pedido%20do%20Bolo%20de%20Aniversario%20Chocolate" target="_blank" class="btn-whatsapp">
+          Pedir no WhatsApp
+        </a>
+      </div>
+
+
+      <div class="bolo-card">
+        <h3>Bolo Morango</h3>
+        <div class="carousel">
+          <button class="prev" onclick="mudarSlide(this, -1)">❮</button>
+
+          <img src="IMG/BolosCards/BolosAniversario/BoloMorangoAni2.jfif" class="slide ativo" alt="Bolo de Morango">
+          <img src="IMG/BolosCards/BolosAniversario/BoloMorangoAni.jfif" class="slide" alt="Bolo de Morango">
+          <img src="IMG/BolosCards/Massa/MassaMorango2.jfif" class="slide" alt="Bolo de Morango">
+          <img src="IMG/BolosCards/Massa/MassaMorango1.jfif" class="slide" alt="Bolo de Morango">
+          
+          
+
+          <button class="next" onclick="mudarSlide(this, 1)">❯</button>
+        </div>
+
+        <div class="descricao">Bolo de Aniversário com recheio de Morango.</div>
+        <div class="preco">R$ 95,00</div>
+        <a href="https://wa.me/5511984388061?text=Olá,%20quero%20fazer%20pedido%20do%20Bolo%20de%20Aniversario%20Morango" target="_blank" class="btn-whatsapp">
+          Pedir no WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+                      <!--Bolos Caseiros--> 
+  <div class="categoria" id="caseiros">
+    <h2>Bolos Caseiros</h2>
+    <div class="bolos-lista">
+      <div class="bolo-card">
+        <h3>Bolo Chocolate Caseiro</h3>
+        <div class="carousel">
+          <button class="prev" onclick="mudarSlide(this, -1)">❮</button>
+
+          <img src="IMG/BolosCards/BolosCaseiros/BoloChocolateCase2.jfif" class="slide ativo" alt="Bolo de Chocolate">
+          <img src="IMG/BolosCards/BolosCaseiros/BoloChocolateCase1.jfif" class="slide" alt="Bolo de Chocolate">
+          
+
+          <button class="next" onclick="mudarSlide(this, 1)">❯</button>
+        </div>
+
+        <div class="descricao">Bolo de chocolate caseiro com cobertura.</div>
+        <div class="preco">R$ 35,00</div>
+        <a href="https://wa.me/5511984388061?text=Olá,%20quero%20fazer%20pedido%20do%20Bolo%20de%20Chocolate%20Caseiro" target="_blank" class="btn-whatsapp">
+          Pedir no WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  function irParaCategoria(id) {
+    document.getElementById(id).scrollIntoView({
+      behavior: 'smooth'
+    });
+  }
+</script>
+</body>
+</html>
