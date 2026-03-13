@@ -86,12 +86,25 @@ body {
   height: auto;
   margin: 0 10px;
   cursor: pointer; 
+  margin-top: 10px;
 }
 
 #instagram{
     width: 10vw;     
-  max-width: 55px;  
+  max-width: 80px;  
   height: auto;
   margin: 0 10px;
   cursor: pointer; 
+}
+
+@media (max-width:600px) {
+
+  #instagram{
+    width: 90px
+  }
+
+  #whatsapp{
+    width: 90px
+  }
+
 }
