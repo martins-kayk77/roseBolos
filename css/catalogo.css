@@ -14,6 +14,23 @@ text-align:center;
 color:#8b2e3d;
 }
 
+.alerta-info{
+background:#8b2e3d;
+color:#ffffff;
+border:1px solid #ffeeba;
+padding:12px;
+border-radius:6px;
+text-align:center;
+font-weight:bold;
+cursor:pointer;
+margin-bottom:25px;
+transition:0.3s;
+}
+
+.alerta-info:hover{
+background:#6e2330;
+}
+
 /* menu categorias */
 
 .menu-categorias{
