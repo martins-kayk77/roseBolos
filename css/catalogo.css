@@ -154,6 +154,8 @@ width:90%;
 
 }
 
+
+/*ajuste nas imagens*/
 #boloMorango{
   object-position: center 25%;
 }
@@ -168,4 +170,36 @@ width:90%;
 
 #boloJoao{
   object-position: center 25%;
+}
+
+#boloMorango2{
+  object-position: center 30%;
+}
+
+#boloMorango3{
+  object-position: center 25%;
+}
+
+#boloMorango4{
+  object-position: center 35%;
+}
+
+#boloFruta{
+  object-position: center 40%;
+}
+
+#boloRoblox{
+    object-position: center 40%;
+}
+
+#boloSaoPaulo{
+    object-position: center 65%;
+}
+
+#boloMorango05{
+    object-position: center 30%;
+}
+
+#boloChoco{
+    object-position: center 60%;
 }
